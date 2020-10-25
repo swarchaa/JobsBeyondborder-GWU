@@ -1,0 +1,27 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+
+<h1>Request Jobs Through TheMuse API</h1>
+<form action="" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.position_name.label }}<br>
+        {{ form.position_name(size=32) }}
+    </p>
+    <p>
+        {{ form.category.label }}<br>
+        {{ form.category }}
+    </p>
+    <p>
+        {{ form.page.label }}<br>
+        {{ form.page }}
+    </p>
+    <p>
+        {{ form.level.label }}<br>
+        {{ form.level }}
+    </p>
+    <p>{{ form.submit(class="btn btn-outline-info") }}</p>
+</form>
+
+{% endblock %}

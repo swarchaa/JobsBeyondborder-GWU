@@ -1,0 +1,264 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+    footer {
+        background: #262829;
+
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        margin: 0;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    #landing {
+        background: #fff;
+    }
+
+    #landing-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    #landing-text h2 {
+        color: #888;
+    }
+
+    #landing-image {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex: 0 1 60vw;
+        margin: 0 !important;
+    }
+
+    .btn {
+        padding: 0.5rem 2rem;
+        border: 1px #ccc solid;
+        display: inline-block;
+        margin: 2rem 0 0;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #333;
+        transition: background 500ms ease;
+    }
+
+    .btn:hover {
+        background: #f4f4f4;
+    }
+
+    #header {
+        padding: 1.5rem;
+        text-align: center;
+        background: #333;
+        color: #fff;
+    }
+
+    #header h2 {
+        border-left: dotted 1px #fff;
+        border-right: dotted 1px #fff;
+        display: inline-block;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .caption {
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    #smallerimages {
+        display: block;
+        height: 150px;
+        width: 150px;
+    }
+
+    .container {
+        padding:0;
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:white; 
+        color:black;
+        opacity:0.9;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 0px 20px 0px 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+
+<div class="container">
+
+    <div id="container">
+        <div id="landing-text">
+            <div id="landing-text-inner">
+                <h1>Propel Your Career with Jobs Beyond Border</h1>
+                <h2>A job portal dedicated to international students</h2>
+            </div>
+        </div>
+        <br />
+    </div>
+
+    <div class="container">
+
+        <img src="\static\webimages\home1.jpg" alt="">
+        <div class="centered">
+            <h2> What is Jobs Beyond Border? </h2>
+            <p>
+            It is a platform dedicated to the needs of international students. All international students coming to the US should have a dedicated tool that will make them competitive in the US job marketplace. Our platform will do its best to help in job search, educate with content and provide advanced analysis tools so that users can slice and dice H1B data.    
+            </p>
+        </div>
+    </div>
+    <br />
+
+    <h3>Our role</h3>
+    <div class="container">
+
+        <img src="\static\webimages\home2.jpg" alt="">
+        <div class="centered">
+            <h2> How do we do it? </h2>
+            <p>
+                At Jobs Beyond Border, we believe in empowering the international students community and ensuring that your job search is targeted and effective. We provide you with pre-filtered jobs, educative blogs and a complete real-time analysis of the US job market, so that you can make the right decisions at the right time.
+            </p>
+        </div>
+    </div>
+    <br />
+    <div id="caption">
+        <h3>What We Do</h3>
+        <p style="color:black;">There's no exact formula for success. But, together we can achieve it.</p>
+    </div>
+
+
+    <div class="row">
+        <div class="column">
+            <img src="\static\webimages\home3.jpeg">
+            <h6>Pre-filtered jobs</h6>
+        </div>
+        <div class="column">
+            <img src="\static\webimages\home4.jpg">
+            <h6>Educate yourself</h6>
+        </div>
+        <div class="column">
+            <img src="\static\webimages\home5.jpg">
+            <h6>A comprehensive industry analysis</h6>
+        </div>
+    </div>
+</div>
+<br />
+<footer class="page-footer font-small blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <h5 class="text-uppercase">Jobs Beyond Border LLC</h5>
+                <p>All services on the website are provided by JBB.com. 
+                    <br />All rights reserved.</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href=" {{ url_for('jobs') }} ">Jobs</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('blogs') }}">Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('analysis') }}">Analysis</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}">About</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Social Media</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#!">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="#!">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#!">VK</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        &copy; 2020 Copyright:
+        <a href="#"> jbb.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+{% endblock content %}

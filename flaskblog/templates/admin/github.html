@@ -1,0 +1,24 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+
+
+<h1>Request Jobs Through GitHub API</h1>
+<form action="" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.description.label }}<br>
+        {{ form.description(size=32) }}
+    </p>
+    <p>
+        {{ form.location.label }}<br>
+        {{ form.location(size=32) }}
+    </p>
+    <p>
+        {{ form.fulltime.label }}<br>
+        {{ form.fulltime }}
+    </p>
+    <p>{{ form.submit(class="btn btn-outline-info") }}</p>
+</form>
+
+{% endblock %}

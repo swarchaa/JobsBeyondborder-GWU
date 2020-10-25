@@ -1,0 +1,88 @@
+{% extends 'admin/master.html' %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% block body %}
+    <div class="card">
+        <div class="card-body">
+            <h1 class="display-1">This is Administrator's Dashboard</h1>
+        </div>
+        <div class="p-3 mb-2 bg-success text-white">
+            Please read the policies carefully.
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Page Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Policies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">User</th>
+                    <td>Manage</td>
+                    <td>
+                        <ul>
+                            <li>You are not allowed to add or delete a user (with the exception of management's order).</li>
+                            <li>You cannot add Administrator (with the exception of management's order).</li>
+                            <li>Editing is allowed only if Administrator has an order from an upper management.</li>
+                            <li>You are allowed to export a report for presentation purposes only.</li>
+                            <li>You are allowed to use all the filtering, searching and sorting functions available.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Post</th>
+                    <td>Manage</td>
+                    <td>
+                        <ul>
+                            <li>You are allowed to add or delete a blog post.</li>
+                            <li>You are allowed to edit a blog post only if Administrator has an order from an upper management.</li>
+                            <li>You are allowed to export a report for presentation purposes only.</li>
+                            <li>You are allowed to use all the filtering, searching and sorting functions available.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">APIs</th>
+                    <td>My Github View</td>
+                    <td>
+                        <ul>
+                            <li>You are allowed to request jobs through GitHub API.</li>
+                            <li>Please make sure you input all the details in the respective fields.</li>
+                            <li>JBB has advanced filtering, so if after requesting Job postings, you get no result - that means the postings had red flag words or simply Github for Jobs did not have job postings.</li>
+                            <li>After jobs are added, you should Approve the jobs so that they can appear on main web application and users can see them.</li>
+                            <li>You are allowed to use all the filtering, searching and sorting functions available.</li>
+                            <li>You are allowed to export a report for presentation purposes only.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">APIs</th>
+                    <td>My Muse View</td>
+                    <td>
+                        <ul>
+                            <li>You are allowed to request jobs through TheMuse API.</li>
+                            <li>Please make sure you input all the details in the respective fields.</li>
+                            <li>JBB has advanced filtering, so if after requesting Job postings, you get no result - that means the postings had red flag words or simply TheMuse did not have job postings.</li>
+                            <li>After jobs are added, you should Approve the jobs so that they can appear on main web application and users can see them.</li>
+                            <li>You are allowed to use all the filtering, searching and sorting functions available.</li>
+                            <li>You are allowed to export a report for presentation purposes only.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Job</th>
+                    <td>Job</td>
+                    <td>
+                        <ul>
+                            <li>You should approve jobs on this page. Please make sure that you consult with an upper management to obtain list of to-be-approved jobs.</li>
+                            <li>You are allowed to create jobs only if you received a request from an upper management.</li>
+                            <li>You are allowed to use all the filtering, searching and sorting functions available.</li>
+                            <li>You are allowed to export a report for presentation purposes only.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
